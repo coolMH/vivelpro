@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivel Pro - Digital Excellence in UAE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom animations replacing framer-motion */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, transform;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+        
+        /* Selection color */
+        ::selection {
+            background-color: #10b981; /* emerald-500 */
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans antialiased">
+
+    <!-- Header -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white tracking-tighter">
+                        VIVEL<span class="text-emerald-500">PRO</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#services" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                        <a href="#about" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#contact" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                        <a href="#contact" class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        <i data-lucide="menu" id="icon-menu" class="h-6 w-6"></i>
+                        <i data-lucide="x" id="icon-close" class="h-6 w-6 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black border-b border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#services" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#about" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#contact" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-20 fade-in-section">
+            <!-- Background Gradient -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-900/20 via-black to-black"></div>
+            
+            <!-- Grid Pattern -->
+            <div class="absolute inset-0 opacity-20" style="background-image: url('https://grainy-gradients.vercel.app/noise.svg');"></div>
+            
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div>
+                    <h2 class="text-emerald-500 font-mono text-sm tracking-widest uppercase mb-4">
+                        Digital Excellence in UAE
+                    </h2>
+                    <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6">
+                        We Craft Digital <br />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">
+                            Experiences
+                        </span>
+                    </h1>
+                    <p class="mt-4 text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+                        Vivel Pro is a premier digital agency based in the UAE. We transform businesses through innovative web development, app creation, and strategic social media marketing.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="#contact" class="group flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all hover:scale-105">
+                            Start Your Project
+                            <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#services" class="flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 px-8 py-4 rounded-full text-lg font-medium transition-all">
+                            Our Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="py-24 bg-zinc-950 relative overflow-hidden fade-in-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-emerald-500 font-mono text-sm tracking-widest uppercase mb-2">What We Do</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold text-white">Our Expertise</h3>
+                    <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+                        Comprehensive digital solutions tailored to elevate your brand in the competitive UAE market.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/50 hover:bg-white/10 transition-all group">
+                        <div class="mb-6 p-4 rounded-xl bg-white/5 w-fit group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="share-2" class="w-8 h-8 text-emerald-400"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Social Media Marketing</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            Strategic campaigns that engage your audience and build brand loyalty across all major platforms.
+                        </p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/50 hover:bg-white/10 transition-all group">
+                        <div class="mb-6 p-4 rounded-xl bg-white/5 w-fit group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="globe" class="w-8 h-8 text-cyan-400"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Web Development</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            Custom, high-performance websites built with modern technologies to drive conversions and growth.
+                        </p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/50 hover:bg-white/10 transition-all group">
+                        <div class="mb-6 p-4 rounded-xl bg-white/5 w-fit group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="smartphone" class="w-8 h-8 text-purple-400"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">App Development</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            Native and cross-platform mobile applications designed for seamless user experiences.
+                        </p>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/50 hover:bg-white/10 transition-all group">
+                        <div class="mb-6 p-4 rounded-xl bg-white/5 w-fit group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="layout" class="w-8 h-8 text-pink-400"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">UI/UX Design</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            User-centric design that combines aesthetics with functionality for intuitive digital products.
+                        </p>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/50 hover:bg-white/10 transition-all group">
+                        <div class="mb-6 p-4 rounded-xl bg-white/5 w-fit group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="code" class="w-8 h-8 text-yellow-400"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Custom Software</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            Tailored software solutions to streamline your business operations and improve efficiency.
+                        </p>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/50 hover:bg-white/10 transition-all group">
+                        <div class="mb-6 p-4 rounded-xl bg-white/5 w-fit group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="line-chart" class="w-8 h-8 text-orange-400"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Digital Strategy</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            Data-driven insights and roadmaps to navigate the digital landscape and achieve your goals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="py-24 bg-black relative fade-in-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-2xl opacity-20 blur-xl"></div>
+                        <img 
+                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                            alt="Team collaboration" 
+                            class="relative rounded-2xl shadow-2xl border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
+                        />
+                    </div>
+
+                    <div>
+                        <h2 class="text-emerald-500 font-mono text-sm tracking-widest uppercase mb-2">About Us</h2>
+                        <h3 class="text-3xl md:text-5xl font-bold text-white mb-6">
+                            Empowering Brands in the Digital Age
+                        </h3>
+                        <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                            Based in the heart of the UAE, Vivel Pro is more than just a digital agency. We are your strategic partners in growth. With a deep understanding of the local market and global digital trends, we deliver solutions that resonate and convert.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-emerald-500 flex-shrink-0"></i>
+                                <span class="text-white font-medium">UAE Market Expertise</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-emerald-500 flex-shrink-0"></i>
+                                <span class="text-white font-medium">Innovative Technology Stack</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-emerald-500 flex-shrink-0"></i>
+                                <span class="text-white font-medium">Results-Driven Approach</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-emerald-500 flex-shrink-0"></i>
+                                <span class="text-white font-medium">Dedicated Support Team</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-24 bg-zinc-950 fade-in-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-emerald-500 font-mono text-sm tracking-widest uppercase mb-2">Get in Touch</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold text-white mb-6">
+                        Ready to Scale Your Business?
+                    </h3>
+                    <p class="text-gray-400 text-lg mb-12">
+                        Let's discuss how Vivel Pro can transform your digital presence. Reach out to us today for a consultation.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+                        <a href="mailto:contact@vivelpro.com" class="flex items-center gap-3 bg-white/5 hover:bg-emerald-500/20 border border-white/10 hover:border-emerald-500/50 text-white px-8 py-4 rounded-full text-lg font-medium transition-all w-full sm:w-auto justify-center group">
+                            <i data-lucide="mail" class="w-5 h-5 text-emerald-500 group-hover:scale-110 transition-transform"></i>
+                            Email Us
+                        </a>
+
+                        <a href="https://wa.me/971500000000" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all w-full sm:w-auto justify-center shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 group">
+                            <i data-lucide="message-circle" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                            WhatsApp Us
+                        </a>
+                    </div>
+
+                    <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-emerald-500"></i>
+                        <span class="text-gray-300">Based in United Arab Emirates</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#" class="text-2xl font-bold text-white tracking-tighter mb-4 block">
+                        VIVEL<span class="text-emerald-500">PRO</span>
+                    </a>
+                    <p class="text-gray-400 max-w-xs">
+                        Elevating brands through digital innovation. Your partner for success in the UAE and beyond.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-emerald-500 transition-colors">Social Media</a></li>
+                        <li><a href="#" class="hover:text-emerald-500 transition-colors">Web Development</a></li>
+                        <li><a href="#" class="hover:text-emerald-500 transition-colors">App Development</a></li>
+                        <li><a href="#" class="hover:text-emerald-500 transition-colors">Digital Strategy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-emerald-500 transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-emerald-500 transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-emerald-500 transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-emerald-500 transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">
+                    © <span id="year"></span> Vivel Pro. All rights reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/971500000000" target="_blank" rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-lg transition-colors flex items-center justify-center hover:scale-110 active:scale-90 transition-transform duration-200">
+       <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('icon-menu');
+        const iconClose = document.getElementById('icon-close');
+
+        if(btn && menu) {
+            btn.addEventListener('click', () => {
+                const isHidden = menu.classList.contains('hidden');
+                if (isHidden) {
+                    menu.classList.remove('hidden');
+                    iconOpen.classList.add('hidden');
+                    iconClose.classList.remove('hidden');
+                } else {
+                    menu.classList.add('hidden');
+                    iconOpen.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                }
+            });
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
